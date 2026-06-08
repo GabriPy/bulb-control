@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controllo Luci - Icon Pack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .container {
+            display: flex;
+            gap: 30px; /* Spazio tra i bottoni */
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .btn-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* REGOLA LA GRANDEZZA DEL BOTTONE QUI */
+            width: 120px;
+            height: 120px;
+            
+            /* REGOLA LA GRANDEZZA DELLA LAMPADINA QUI */
+            font-size: 55px;
+            
+            border-radius: 50%; /* Li rende perfettamente tondi */
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.2s;
+            color: white;
+            text-decoration: none;
+        }
+        .btn-icon:active {
+            transform: scale(0.90); /* Effetto click */
+        }
+        /* Bottone ACCENDI: Verde */
+        .btn-on {
+            background-color: #4CAF50;
+            box-shadow: 0 6px #2E7D32;
+        }
+        .btn-on:active {
+            box-shadow: 0 2px #2E7D32;
+        }
+        /* Bottone SPEGNI: Rosso */
+        .btn-off {
+            background-color: #f44336;
+            box-shadow: 0 6px #C62828;
+        }
+        .btn-off:active {
+            box-shadow: 0 2px #C62828;
+        }
+        /* Iframe nascosto per non ricaricare la pagina */
+        .hidden-iframe {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=a62e70ed-2e21-4cd6-be1f-f46ed5d92cf7&token=ddd7d8bd-67f8-4632-b44d-1a5030acdd65&response=smartphone" 
+       target="link_target" 
+       class="btn-icon btn-on"
+       title="Accendi Luci">
+       <i class="fa-solid fa-lightbulb"></i>
+    </a>
+
+    <a href="https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1cbfbded-af12-4aa4-940c-a2e9e80f9960&token=9b05ac6b-493f-46db-955f-2a949c14613b&response=smartphone" 
+       target="link_target" 
+       class="btn-icon btn-off"
+       title="Spegni Luci">
+       <i class="fa-solid fa-lightbulb"></i>
+    </a>
+</div>
+
+<iframe name="link_target" class="hidden-iframe"></iframe>
+
+</body>
+</html>
